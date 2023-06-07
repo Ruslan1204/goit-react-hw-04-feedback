@@ -6,8 +6,6 @@ export const Section = ({ title, children }) => {
     <div className={css.container}>
       <h1>{title}</h1>
       {children}
-      {/* <h2>{title}</h2> */}
-      {/* <Notification message = 'There is no feedback'/> */}
     </div>
   );
 };
