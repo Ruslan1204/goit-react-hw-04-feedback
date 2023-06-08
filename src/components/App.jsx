@@ -9,14 +9,17 @@ const options = [
   { id: 'neutral', title: 'neutral' },
   { id: 'bad', title: 'bad' },
 ];
+let total = 0;
 
 export const App = () => {
-  const [total, setTotal] = useState(0);
+  // const [total, setTotal] = useState(0);
   const [feedback, setFeedback] = useState({
     good: 0,
     neutral: 0,
     bad: 0,
   });
+
+  
   const { good, neutral, bad } = feedback;
 
   let positivePercentage = good / total * 100;
@@ -30,7 +33,8 @@ export const App = () => {
   };
 
   const countTotalFeedback = () => {
-    setTotal(prevState => prevState + 1);
+    total += 1;
+    // setTotal(prevState => prevState + 1);
   };
 
   return (
